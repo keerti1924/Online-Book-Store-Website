@@ -51,7 +51,7 @@ if (isset($_POST['order_btn'])) {
 
 ?>
 <?php
-include "inc/header2.php";
+include "inc/header.php";
 ?>
 
 <!-- Header Start -->
@@ -271,5 +271,5 @@ include "inc/header2.php";
 <!-- Checkout End -->
 
 <?php
-include "inc/footer2.php";
+include "inc/footer.php";
 ?>
