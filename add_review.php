@@ -31,11 +31,7 @@ if (isset($_POST['add_review'])) {
 
 ?>
 <?php
-if (!isset($_SESSION["user_id"]) == true):
     include "inc/header.php";
-else:
-    include "inc/header2.php";
-endif;
 ?>
 
 
