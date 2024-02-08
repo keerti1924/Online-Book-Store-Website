@@ -28,7 +28,7 @@ include "admin/header.php";
 
     <!-- Admin Products Start -->
 
-    <div class="container-xxl py-5" style="height:90vh;">
+    <div class="container-xxl py-5" style="min-height:90vh;">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5 text-center px-3">REVIEWS</h1>
@@ -38,14 +38,15 @@ include "admin/header.php";
             include("admin/messages.php");
             ?>
 
-            <div class="cards">
+            <div class="row">
                 <?php
                 $select_review = mysqli_query($conn, "SELECT * FROM `review`") or die('query failed');
                 if (mysqli_num_rows($select_review) > 0) {
                     while ($fetch_review = mysqli_fetch_assoc($select_review)) {
 
                         ?>
-                        <div class="card shadow" style="width: 18rem;">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card shadow" style="width: 18rem;">
 
                             <div class="card-body">
                                 <h2 class="card-title text-capitalize">
@@ -60,6 +61,7 @@ include "admin/header.php";
                                     onclick="return confirm('Delete this Review?');"
                                     class="btn text-center btn-danger w-100">Delete</a>
                             </div>
+                        </div>
                         </div>
                         <?php
                     }
